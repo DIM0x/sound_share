@@ -2,7 +2,8 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "SoundShare"
-#define MyAppVersion "2025.12.08"
+#define MyAppVersion "2025.12.22"
+#define BuildHour "14"
 #define MyAppPublisher "UMUTech"
 #define MyAppURL "https://umutech.com/"
 #define MyAppExeName "SoundShare.exe"
@@ -38,6 +39,10 @@ PrivilegesRequiredOverridesAllowed=dialog
 OutputBaseFilename=SoundShareSetup_v{#MyAppVersion}
 SignTool=UMU
 SolidCompression=yes
+VersionInfoVersion={#MyAppVersion}.{#BuildHour}
+VersionInfoCompany={#MyAppPublisher}
+VersionInfoCopyright=Copyright {#MyAppPublisher} 2025
+VersionInfoOriginalFileName=SoundShareSetup_v{#MyAppVersion}
 WizardStyle=modern
 
 [Code]
@@ -137,14 +142,14 @@ Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{
 
 [Files]
 Source: ".\assets\*"; DestDir: "{app}\assets"; Flags: ignoreversion recursesubdirs createallsubdirs
-Source: ".\bin\avutil-59.dll"; DestDir: "{app}\bin"; Flags: ignoreversion
+Source: ".\bin\avutil-60.dll"; DestDir: "{app}\bin"; Flags: ignoreversion
 Source: ".\bin\{#MyAppExeName}"; DestDir: "{app}\bin"; Flags: ignoreversion
 Source: ".\bin\{#MyAppExeName}.en-US.mui"; DestDir: "{app}\bin"; Flags: ignoreversion
 Source: ".\bin\{#MyAppExeName}.zh-CN.mui"; DestDir: "{app}\bin"; Flags: ignoreversion
 Source: ".\bin\{#MyApp2ExeName}"; DestDir: "{app}\bin"; Flags: ignoreversion
 Source: ".\bin\{#MyApp2ExeName}.en-US.mui"; DestDir: "{app}\bin"; Flags: ignoreversion
 Source: ".\bin\{#MyApp2ExeName}.zh-CN.mui"; DestDir: "{app}\bin"; Flags: ignoreversion
-Source: ".\bin\swresample-5.dll"; DestDir: "{app}\bin"; Flags: ignoreversion
+Source: ".\bin\swresample-6.dll"; DestDir: "{app}\bin"; Flags: ignoreversion
 Source: ".\bin\WebView2Loader.dll"; DestDir: "{app}\bin"; Flags: ignoreversion
 Source: ".\bin\XAudio2_9Redist.dll"; DestDir: "{app}\bin"; Flags: ignoreversion
 Source: ".\conf\*"; DestDir: "{app}\conf"; Flags: ignoreversion recursesubdirs createallsubdirs
