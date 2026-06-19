@@ -2,8 +2,8 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "SoundShare"
-#define MyAppVersion "2026.01.25"
-#define BuildHour "18"
+#define MyAppVersion "2026.06.20"
+#define BuildHour "02"
 #define MyAppPublisher "UMUTech"
 #define MyAppURL "https://umutech.com/"
 #define MyAppExeName "SoundShare.exe"
